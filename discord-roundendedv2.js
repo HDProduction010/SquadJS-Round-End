@@ -3,7 +3,7 @@ import BasePlugin from './base-plugin.js';
 
 export default class DiscordRoundEndedv2 extends BasePlugin {
   static get description() {
-    return 'Show Of Force | INTERNAL BACKEND SYSTEMS | This plugin will create webhook messages on SoF Discord: ROUND ENDED, ROUND STARTED';
+    return 'This plugin will create webhook messages on Discord: ROUND ENDED, ROUND STARTED';
   }
 
   static get defaultEnabled() {
