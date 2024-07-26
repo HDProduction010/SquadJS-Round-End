@@ -29,6 +29,7 @@ Below is the configuration required for the `DiscordRoundEnded` plugin. Make sur
     "color": 4214509
 }
 ```
+Make sure to set the old DiscordRoundEnded to disabled by setting the value `enabled` to false.
 
 ### Obtaining the Discord Webhook URL
 
