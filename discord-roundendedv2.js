@@ -80,12 +80,12 @@ export default class DiscordRoundEndedv2 extends BasePlugin {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
-    })
+    });
   }
 
   async roundEnded(info, winnerDeaths, loserDeaths, winnerRevives, loserRevives, winnerDowns, loserDowns) {
     const endTime = Math.floor(Date.now() / 1000);
-    const startTime = info.startTime ? Math.floor(new Date(info.startTime).getTime() / 1000) : null;
+    const startTime = this.match?.startTime ? Math.floor(new Date(this.match.startTime).getTime() / 1000) : null;
     const duration = startTime ? ((endTime - startTime) / 60).toFixed(2) : 'Unknown';
 
     await this.sendWebhook(this.channelWebhookLink, {
@@ -112,7 +112,7 @@ export default class DiscordRoundEndedv2 extends BasePlugin {
         ]
       }],
       timestamp: (new Date()).toISOString()
-    })
+    });
   }
 
   async OnNewGame(info) {
@@ -125,7 +125,7 @@ export default class DiscordRoundEndedv2 extends BasePlugin {
     this.downsTeam2 = 0;
 
     await this.server.updateLayerInformation();
-    this.sendWebhook
+    this.sendWebhook;
   }
 
   async onPlayerRevived(info) {
@@ -170,7 +170,7 @@ export default class DiscordRoundEndedv2 extends BasePlugin {
           color: this.color,
         }],
         timestamp: info.time.toISOString()
-      })
+      });
       return;
     }
 
